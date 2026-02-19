@@ -1,145 +1,177 @@
-# 🚀 Smart Presence  
-### AI Powered Face Recognition Attendance & Smart Classroom Monitoring System  
+# 🚀 Smart Presence
 
-Smart Presence is a secure AI-based attendance and classroom monitoring system built using Flask, DeepFace, and a modular SPA architecture.  
+## AI Powered Face Recognition Attendance & Smart Classroom Monitoring System
 
-It enables real-time biometric attendance marking, security monitoring, and analytics dashboards for administrators, faculty, and students.
+Smart Presence is an AI-based secure attendance and classroom monitoring system developed using **Flask**, **DeepFace**, and a modular **Single Page Application (SPA)** architecture.
+
+The system allows biometric attendance marking using facial recognition, real-time monitoring, security alerts, and analytics dashboards for administrators, faculty, and students.
 
 ---
 
 ## 📌 Key Features
 
 ### 🔐 Authentication & Security
-- Role-based access control (Admin / Faculty / Student)
-- Custom CSRF protection system
-- Brute-force login protection
-- Session timeout monitoring
-- Intrusion detection & security logging
-- Account lock mechanism
+
+* Role-based access control (Admin / Faculty / Student)
+* Custom CSRF protection for SPA APIs
+* Brute-force login protection
+* Session timeout monitoring
+* Intrusion detection & security logging
+* Account lock mechanism after failed attempts
 
 ### 🤖 AI-Based Face Recognition
-- Face registration & encrypted storage
-- DeepFace powered biometric verification
-- Liveness detection
-- Biometric violation tracking
-- Attendance fraud prevention
+
+* Secure face registration
+* Encrypted biometric data storage
+* DeepFace powered identity verification
+* Liveness detection
+* Biometric violation detection
+* Proxy attendance prevention
 
 ### 📊 Smart Dashboards
-- Admin analytics dashboard
-- Faculty session management
-- Student attendance tracking
-- Real-time statistics (Chart.js)
-- Security alerts monitoring
 
-### 📡 Real-Time Features
-- Server Sent Events (SSE) notifications
-- Live attendance updates
-- Session auto-closing
-- Feedback monitoring with email alerts
+* Admin analytics dashboard
+* Faculty attendance session control
+* Student attendance tracking
+* Real-time charts using Chart.js
+* Security alerts monitoring
+
+### 📡 Real-Time System
+
+* Live notifications using Server-Sent Events (SSE)
+* Instant attendance updates
+* Automatic session closing
+* Negative feedback email alerts
 
 ---
 
-## 🏗 Architecture Overview
+## 🏗 System Architecture
 
-Backend:
-- Flask (Blueprint Architecture)
-- SQLAlchemy ORM
-- Flask-Login (Session Management)
-- Flask-Migrate (Database Migrations)
-- DeepFace (AI Model)
+### Backend
 
-Frontend:
-- Vanilla JavaScript SPA
-- Modular View System
-- Chart.js Analytics
-- Face-api.js (Client-side detection)
-- Responsive CSS UI
+* Flask (Blueprint Architecture)
+* SQLAlchemy ORM
+* Flask-Login (Session Authentication)
+* Flask-Migrate (Database Migrations)
+* DeepFace (Face Recognition AI)
 
-Database:
-- SQLite (Development)
-- PostgreSQL Ready (Production)
+### Frontend
+
+* Vanilla JavaScript SPA
+* Modular view lifecycle system
+* Chart.js analytics dashboard
+* Face-api.js client detection
+* Responsive UI design
+
+### Database
+
+* SQLite (Development)
+* PostgreSQL Ready (Production)
 
 ---
 
 ## 📂 Project Structure
+
+```
 app/
-├── models/
-├── routes/
-├── services/
-├── utils/
+ ├── models/
+ ├── routes/
+ ├── services/
+ ├── utils/
+
 static/
 templates/
 migrations/
+```
 
-The project follows clean separation of concerns:
-- Models → Database layer
-- Routes → API layer
-- Services → Business logic
-- Utils → Security & helpers
+### Layer Explanation
 
----
-
-## 🔒 Security Highlights
-
-- Environment-based secret management
-- Encrypted biometric data
-- Secure cookies (HTTPOnly + SameSite)
-- Rate limiting
-- Session monitoring
-- CSRF protection for SPA
+* **Models** → Database schema
+* **Routes** → API endpoints
+* **Services** → Business logic
+* **Utils** → Security & helper utilities
 
 ---
 
-## ⚙ Installation
+## 🔒 Security Implementation
 
-```bash
+* Environment-based secret configuration
+* Encrypted biometric storage
+* HTTPOnly secure cookies
+* SameSite session protection
+* Rate limiting
+* Custom CSRF protection for SPA
+* Security alert logging
+
+---
+
+## ⚙ Installation & Setup
+
+Clone repository:
+
+```
 git clone https://github.com/Chandu-0604/Smart-Presence.git
 cd Smart-Presence
+```
 
+Create virtual environment:
+
+```
 python -m venv venv
-venv\Scripts\activate   # Windows
+venv\Scripts\activate
+```
 
+Install dependencies:
+
+```
 pip install -r requirements.txt
-Create a .env file:
+```
 
+Create a `.env` file in the project root:
+
+```
 SECRET_KEY=your_secret_key
 FACE_ENCRYPTION_KEY=your_face_key
 MAIL_USERNAME=your_email
 MAIL_PASSWORD=your_app_password
 ADMIN_EMAIL=your_email
+```
 
+Run the application:
 
-Run:
-
+```
 python run.py
+```
 
+Open in browser:
 
-Open:
-
+```
 http://127.0.0.1:5000
+```
 
-📈 Future Enhancements
+---
 
-PWA Support
+## 📈 Future Enhancements
 
-Android App Wrapper
+* Progressive Web App (PWA)
+* Android mobile application
+* Cloud deployment with Gunicorn & Nginx
+* PostgreSQL database migration
+* DeepFace performance optimization
 
-Cloud Deployment (Gunicorn + Nginx)
+---
 
-PostgreSQL Migration
+## 👨‍💻 Developer
 
-Performance Optimization
-
-👨‍💻 Developer
-
-Chandan B
-Final Year Computer Science Engineering Student
+**Chandan B**
+Final Year – Computer Science Engineering
 Brindavan College of Engineering (VTU)
 
 GitHub: https://github.com/Chandu-0604
+LinkedIn: https://www.linkedin.com/in/chandan-b-2950a626a
 
-LinkedIn: www.linkedin.com/in/chandan-b-2950a626a
+---
 
-📜 License
+## 📜 License
 
-This project is developed for academic and research purposes.
+This project is developed for academic and research purposes only.
