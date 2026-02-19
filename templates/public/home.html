@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Smart Presence</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">Smart Presence</div>
+
+    <div class="nav-actions">
+        <a href="{{ url_for('auth.login') }}" class="btn-outline">Login</a>
+        <a href="{{ url_for('auth.register') }}" class="btn-primary">Register</a>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-left">
+       <h1 class="hero-title">
+            <span class="highlight">AI-Powered</span><br>
+            Attendance & Smart Classroom Monitoring
+        </h1>
+
+        <p>
+            Facial recognition attendance, secure session tracking,
+            automated alerts and intelligent feedback — built for modern campuses.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="{{ url_for('auth.register') }}" class="btn-primary">
+                Create Account
+            </a>
+
+            <a href="{{ url_for('auth.login') }}" class="btn-outline">
+                Get Started
+            </a>
+        </div>
+    </div>
+
+    <div class="hero-right">
+        <h3>Live Attendance</h3>
+        <p class="status-ok"><span class="live-dot"></span> Face verified</p>
+        <p class="status-ok"><span class="live-dot"></span> Session Active</p>
+    </div>
+
+</section>
+
+<!-- STATS (NOW OUTSIDE HERO) -->
+<section class="stats-section">
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+            <div class="stat-icon">🎯</div>
+            <div class="stat-number" data-target="99.8">0</div>
+            <div class="stat-label">Face Recognition Accuracy</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">🛡️</div>
+            <div class="stat-number">AES-256</div>
+            <div class="stat-label">Biometric Encryption</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">⚡</div>
+            <div class="stat-number" data-target="0.8">0</div>
+            <div class="stat-label">Attendance Mark Time (sec)</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">📊</div>
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Live Monitoring</div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+
+    <div class="feature">
+        <h3>Face Recognition</h3>
+        <p>Secure biometric attendance with spoof protection.</p>
+    </div>
+
+    <div class="feature">
+        <h3>Faculty Dashboard</h3>
+        <p>Session control, reports and alerts.</p>
+    </div>
+
+    <div class="feature">
+        <h3>Student Feedback AI</h3>
+        <p>Automatic negative feedback detection.</p>
+    </div>
+
+    <div class="feature">
+        <h3>Security System</h3>
+        <p>Brute-force detection & account lock.</p>
+    </div>
+
+</section>
+
+<footer class="footer">
+    © 2026 Smart Presence — Final Year Project
+</footer>
+<script src="{{ url_for('static', filename='app/public/home.js') }}"></script>
+</body>
+</html>

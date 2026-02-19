@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Presence</title>
+
+<link rel="stylesheet" href="/static/css/variables.css">
+<link rel="stylesheet" href="/static/css/core.css">
+<link rel="stylesheet" href="/static/css/components.css">
+
+</head>
+
+<body class="public">
+
+<div class="public-wrapper">
+    {% block content %}{% endblock %}
+</div>
+
+<!-- IMPORTANT: THIS WAS MISSING -->
+{% block scripts %}{% endblock %}
+
+<!-- Toast Root -->
+<div id="toastRoot"></div>
+
+<script type="module" src="/static/app/core/toast.js"></script>
+</body>
+</html>

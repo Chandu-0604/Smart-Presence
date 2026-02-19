@@ -1,0 +1,62 @@
+{% extends "layout/public_base.html" %}
+
+{% block content %}
+
+<div class="auth-container">
+
+    <div class="auth-card">
+
+        <h2 class="auth-title">Create Account</h2>
+        <p class="auth-subtitle">Join Smart Presence</p>
+
+        <form id="registerForm" autocomplete="off">
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="name" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="email" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+            <label>Password</label>
+            <div class="password-wrapper">
+                <input type="password" id="password" class="form-input password-input" required minlength="6">
+                <button type="button" id="togglePassword" class="toggle-password">👁</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Confirm Password</label>
+            <div class="password-wrapper">
+                <input type="password" id="confirmPassword" class="form-input password-input" required minlength="6">
+                <button type="button" id="toggleConfirmPassword" class="toggle-password">👁</button>
+            </div>
+        </div>
+            <button id="registerBtn" type="submit" class="btn btn-primary w-100">
+                <span class="btn-text">Create Account</span>
+                <span class="btn-loader hidden"></span>
+            </button>
+
+        </form>
+
+        <div class="auth-links">
+            <a href="/auth/login">Already have an account? Login</a>
+        </div>
+
+        <div class="auth-links">
+            <a href="/">← Back to Home</a>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script type="module" src="/static/app/public/register.js"></script>
+{% endblock %}

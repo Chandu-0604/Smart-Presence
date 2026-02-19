@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Virtual Environment
+venv/
+.env/
+.venv/
+
+# Environment variables
+.env
+
+# Flask
+instance/
+.webassets-cache
+
+# Migrations cache
+migrations/__pycache__/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# DeepFace / AI / temp images
+*.h5
+*.pkl
+*.npy
+*.jpg
+*.jpeg
+*.png
+*.webp
+uploads/
+temp/
+cache/
+
+# Node-like cache from browser builds (safety)
+dist/
+build/
+
+# Face-api models (VERY LARGE)
+static/third_party/faceapi/models/*.bin
+static/third_party/faceapi/models/*.weights
+
+# Database
+attendance.db

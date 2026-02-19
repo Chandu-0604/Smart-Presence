@@ -1,0 +1,180 @@
+/* GLOBAL RESET */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: Inter, system-ui, Arial, sans-serif;
+    background: radial-gradient(circle at 20% 20%, #0f1b33, #070d18 60%);
+    color:var(--text);
+    min-height:100vh;
+}
+
+/* PUBLIC PAGE CENTER WRAPPER */
+
+.public-wrapper{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Inter,system-ui,Segoe UI,Arial;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+}
+
+/* APP LAYOUT */
+
+#app{
+    display:flex;
+    min-height:100vh;
+}
+
+#sidebar{
+    width:var(--sidebar-width);
+    background:var(--panel);
+    border-right:1px solid var(--border);
+}
+
+.app-main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+#topbar{
+    height:64px;
+    background:var(--panel);
+    border-bottom:1px solid var(--border);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 24px;
+}
+
+#view{
+    padding:28px;
+}
+
+/* LOADER */
+
+.app-loader{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.5);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+}
+
+.hidden{display:none;}
+
+.spinner{
+    width:42px;
+    height:42px;
+    border:4px solid #fff;
+    border-top:4px solid transparent;
+    border-radius:50%;
+    animation:spin .8s linear infinite;
+}
+
+@keyframes spin{
+    to{transform:rotate(360deg);}
+}
+
+/* ===== TOPBAR ===== */
+
+#topbar{
+    height:64px;
+    background:rgba(12,18,32,.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 28px;
+}
+
+.topbar-left{
+    font-size:18px;
+    font-weight:600;
+    color:white;
+}
+
+.topbar-right{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.user-info{
+    color:var(--text-muted);
+    font-size:14px;
+}
+
+.logout-btn{
+    background:#ef4444;
+    border:none;
+    color:white;
+    padding:8px 14px;
+    border-radius:10px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.logout-btn:hover{
+    background:#dc2626;
+}
+
+/* ===== BUTTON SYSTEM ===== */
+
+.btn{
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.18s ease;
+}
+
+/* PRIMARY (blue) */
+.btn-primary{
+    background: linear-gradient(135deg,#4f9cff,#3b82f6);
+    color:white;
+}
+.btn-primary:hover{
+    transform:translateY(-1px);
+    box-shadow:0 6px 18px rgba(79,156,255,.35);
+}
+
+/* DANGER (RED DELETE) */
+.btn-danger{
+    background: linear-gradient(135deg,#ff4d4f,#dc2626);
+    color:red;
+}
+.btn-danger:hover{
+    transform:translateY(-1px);
+    box-shadow:0 6px 18px rgba(255,77,79,.35);
+}
+
+/* SECONDARY (cancel) */
+.btn-secondary{
+    background:#2a3950;
+    color:#dbeafe;
+}
+.btn-secondary:hover{
+    background:#344861;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="csrf-token" content="{{ session.get('csrf_token','') }}">
+<title>Smart Presence</title>
+
+<!-- NEW UI SYSTEM -->
+<link rel="stylesheet" href="/static/css/variables.css">
+<link rel="stylesheet" href="/static/css/core.css">
+<link rel="stylesheet" href="/static/css/components.css">
+<link rel="stylesheet" href="/static/css/modal.css">
+
+</head>
+
+<body data-role="{{ current_user.role }}">
+
+<!-- GLOBAL LOADER -->
+<div id="appLoader" class="app-loader hidden">
+    <div class="spinner"></div>
+</div>
+
+<!-- TOAST ROOT -->
+<div id="toastRoot"></div>
+
+<!-- MODAL ROOT -->
+<div id="modalRoot"></div>
+
+<div id="app">
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar"></aside>
+
+    <!-- MAIN AREA -->
+    <div class="app-main">
+        <header id="topbar"></header>
+        <main id="view"></main>
+    </div>
+
+</div>
+
+<!-- MAIN FRONTEND ENGINE -->
+<script src="/static/vendor/chart.js"></script>
+<script src="/static/app/core/chart-theme.js"></script>
+<script type="module" src="/static/app/core/app.js"></script>
+<script src="/static/third_party/faceapi/face-api.min.js"></script>
+</body>
+</html>
